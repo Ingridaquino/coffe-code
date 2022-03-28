@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 53%;
+    font-family: 'Manrope', sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background-body);
+}
+
+html{
+    scroll-behavior: smooth; /* Rolagem de leve na página */
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+/* ====== VARIAVEIS ================================ */
+:root{
+    --header-height: 6.9rem;
+    --background-body: #000;
+    --title-menu: #ffff;
+
+    --color-lilas:#8257E5;
+
+    --color-linear: linear-gradient(45deg, #534bbb, #8257e5, #8257e5);
+}
+
+
+
+/*===COR NO SCROLL ====*/
+::-webkit-scrollbar{
+    background:var(--background-body); 
+    width: .7rem; 
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--color-lilas); 
+   border-radius: .7rem;
+ }
+
+ /*---- Header ---- */
+
+ #header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
+    /*Para deixar o menu fixo */
+    width: 100%;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; */
+    background: url(../assets/blur-2.png) no-repeat top right;
+ }
+
+ #header nav .menu  ul { 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: var(--header-height);
+    width: 100%;
+    gap: 3rem;
+ }
+
+ #header nav .menu  ul a { 
+     color: var(--title-menu);
+     font-family: 'Manrope', sans-serif;
+     font-weight: 500;
+     font-size: 1.2rem;
+
+     transition: color 0.3s; /* Colocar o color, para ocorrer a transição somente na cor */
+     position: relative;
+ }
+ 
+ #header nav .menu ul a::after { 
+     content: '';
+     width: 0%;
+     height: 1.5px;
+     background-image: linear-gradient(to right top, #051937, #102b62, #534bbb, #8257e5, #8257e5);
+     position: absolute;
+     left: 0;
+     bottom: -1rem;
+
+     transition: width 0.2s;  /*Para dar o efeito dele crescendo */
+ }
+
+ #header nav .menu  ul li a:hover::after{
+    width: 100%;  /*Para dar o efeito dele crescendo */
+}
+
+
+
+
+/*button*/
+
+#header button {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid var(--color-lilas);
+    background-color: transparent ;
+    height:  2rem;
+
+    padding: 1.7rem 3rem ;
+    border-radius: .344rem;
+
+    cursor: pointer;
+}
+
+
+
+#header button p {
+    color: var(--title-menu);
+    font-size: 1.2rem;
+    text-align: center ;
+}
+
+#header #button:hover {
+    filter: brightness(.7);
+}
+
+
+/*Main*/
+.container {
+    margin-left: 1rem; /* 24px */
+    margin-right: 1rem;
+}
+
+section {
+    padding: calc(5rem + var(--header-height))  0;
+}
+
+section .text1 {
+    text-align: center;
+    font-size: 7rem;
+    color: var(--title-menu);
+}
+
+section .text2 { 
+    font-size: 7rem;
+    text-shadow:  -1px -1px 0px var(--color-lilas), 
+               -1px 1px 0px var(--color-lilas),      
+                1px -1px 0px var(--color-lilas),    
+                1px 0px 0px var(--color-lilas);
+    text-align: center;
+}
+
+
+.container .img { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 4rem;
+}
+
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+}
+
+footer p {
+    color: var(--color-lilas);
+    font-size: 1rem;
+}
+
+
+/*Responsividade */
+
+@media(max-width: 1200px) {
+    main {
+        background-color: red;
+    }
+}
+
