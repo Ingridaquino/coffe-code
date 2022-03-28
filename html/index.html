@@ -15,8 +15,9 @@
 <body>
     <header id="header">
         <img src="../assets/logo-desktop.svg" alt="Logo Desktop">
-        <nav>
-            <div class="menu">
+        <nav id="navBar">
+            <div class="menu" id="listBar">
+                <!-- <img class="close" id="close" src="../assets/menu-buguer-close.svg" alt=""> -->
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Menu</a></li>
@@ -26,10 +27,12 @@
                 </ul>
             </div>
         </nav>
+        <img class="buguer" id="buguer" src="../assets/menu-buguer-open.svg" alt="Menu Buguer">
         <button type="submit" id="button"><p>Pegar Meu Café</p></button>
     </header>
 
     <main>
+    
       <div class="container">
           <section>
               <div class="text1">
@@ -49,5 +52,7 @@
     <footer>
         <p>Great Coffee - 2022 </p>
     </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

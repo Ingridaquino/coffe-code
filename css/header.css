@@ -106,8 +106,9 @@ a:hover{
     width: 100%;  /*Para dar o efeito dele crescendo */
 }
 
-
-
+.buguer, .close {
+    display: none;
+}
 
 /*button*/
 
@@ -189,9 +190,78 @@ footer p {
 
 /*Responsividade */
 
-@media(max-width: 1200px) {
-    main {
-        background-color: red;
-    }
-}
 
+/* Menu responsivo **/
+@media(max-width: 1220px) {
+    .buguer, .close {
+        cursor: pointer;
+        display: block;
+    }
+
+
+    nav .menu {
+        /* opacity: 0;
+        visibility: hidden; */
+        top: -20rem;
+        transition: 0.2s;
+    }
+
+    
+    #header {
+        padding: 1rem 3rem;
+        box-shadow: 0 1px 0 rgb(184, 182, 182);
+    }
+    
+    
+    
+    #header nav .menu ul{ 
+        justify-content: space-between;
+        height: calc(100vh - 14rem);
+        background-color: var(--background-body);
+
+        opacity: 1;
+        visibility: visible;
+
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        display: grid;
+        place-content: center;
+
+    } 
+    
+     #header nav .menu  ul { 
+        display: grid;
+        padding: 0;
+    }
+
+    #header nav .menu  ul li { 
+        position: relative;
+        top: -12rem;
+        width: 100vw;
+        /* height: 5rem; */
+        box-shadow: 0 1px 0 rgb(184, 182, 182);
+        /* border-top: 1px solid #ccc; */
+        padding: 1rem 2rem;
+
+        text-align: left;
+    } 
+
+
+    #header nav .menu ul a::before { 
+        content: '';
+        width: 5px;
+        height: 6rem;
+        background-image: var(--color-lilas);
+        position: absolute;
+        top: -3.4rem;
+        left: -19px;
+   
+    }
+   
+    /* #header nav .menu  ul li a:hover::after{
+       width: 100%;  /*Para dar o efeito dele crescendo */
+   } */
+
+    
+}
